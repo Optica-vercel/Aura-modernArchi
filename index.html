@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | Modern Architecture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Animated Mesh Gradient -->
+    <div class="mesh-bg">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+        <div class="mesh-blob blob-3"></div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <header>
+        <nav class="glass interactive">
+            <div class="logo">AURA</div>
+            <div class="nav-links">
+                <a href="#projects" class="interactive">Projects</a>
+                <a href="#about" class="interactive">Studio</a>
+                <a href="#contact" class="interactive">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- High-quality placeholder architecture video -->
+       <div class="hero-slideshow">
+    <div class="slide slide-1"></div>
+    <div class="slide slide-2"></div>
+    <div class="slide slide-3"></div>
+</div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content glass">
+            <h1>Defining Space <br> & Light</h1>
+            <p>A multi-disciplinary architecture and design studio shaping the future of spatial experiences.</p>
+        </div>
+    </section>
+
+    <!-- Projects Digital Gallery -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2>Selected Works</h2>
+            <p class="serif" style="color: var(--text-muted); font-size: 1.2rem;">2021 — 2024</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="project-card item-1 interactive">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" alt="Villa" class="project-img">
+                <div class="project-info glass">
+                    <h3>The Obsidian House</h3>
+                    <p>Residential / Kyoto</p>
+                </div>
+            </div>
+            <div class="project-card item-2 interactive">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Interior" class="project-img">
+                <div class="project-info glass">
+                    <h3>Minimalist Pavilion</h3>
+                    <p>Cultural / Oslo</p>
+                </div>
+            </div>
+            <div class="project-card item-3 interactive">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Facade" class="project-img">
+                <div class="project-info glass">
+                    <h3>Echo Towers</h3>
+                    <p>Commercial / Dubai</p>
+                </div>
+            </div>
+            <div class="project-card item-4 interactive">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office" class="project-img">
+                <div class="project-info glass">
+                    <h3>Lumina Workspace</h3>
+                    <p>Interior / Berlin</p>
+                </div>
+            </div>
+            <div class="project-card item-5 interactive">
+                <img src="https://images.unsplash.com/photo-1510627489930-0c1b0bfb6785?auto=format&fit=crop&w=1600&q=80" alt="Museum" class="project-img">
+                <div class="project-info glass">
+                    <h3>National Art Gallery</h3>
+                    <p>Public / New York</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Contact Split Layout -->
+    <section id="about" class="split-section">
+        <div class="text-block">
+            <h2 style="margin-bottom: 20px; font-size: 2.5rem;">Form follows emotion.</h2>
+            <p>We believe architecture is more than structure; it is the physical manifestation of identity and culture. Our approach blends brutalist geometry with delicate, translucent layers, creating spaces that feel both grounded and ethereal.</p>
+        </div>
+        <div style="border-radius: 12px; overflow: hidden; height: 100%;">
+            <img src="https://images.unsplash.com/photo-1481253127861-534498168948?auto=format&fit=crop&w=1000&q=80" alt="Studio" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+    </section>
+
+    <section id="contact" class="split-section" style="padding-bottom: 100px;">
+        <div>
+            <h2 style="margin-bottom: 20px; font-size: 2.5rem;">Start a Dialogue</h2>
+            <p style="color: var(--text-muted);">Have a vision? Let's engineer it together.</p>
+        </div>
+        <div class="glass" style="padding: 40px; border-radius: 20px;">
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" class="input-glass interactive">
+                <input type="email" placeholder="Email Address" class="input-glass interactive">
+                <input type="text" placeholder="Project Details" class="input-glass interactive">
+                <button type="button" class="btn interactive">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AURA Architecture Agency. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        const interactives = document.querySelectorAll('.interactive, a, button, input');
+
+        // Smooth Custom Cursor logic
+        let mouseX = 0;
+        let mouseY = 0;
+        let outlineX = 0;
+        let outlineY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            // Dot follows instantly
+            cursorDot.style.left = `${mouseX}px`;
+            cursorDot.style.top = `${mouseY}px`;
+        });
+
+        // Animation loop for the trailing outline effect
+        function animateCursor() {
+            // Easing formula for smooth follow
+            let easing = 0.15;
+            outlineX += (mouseX - outlineX) * easing;
+            outlineY += (mouseY - outlineY) * easing;
+
+            cursorOutline.style.left = `${outlineX}px`;
+            cursorOutline.style.top = `${outlineY}px`;
+
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Hover states for tactile feel
+        interactives.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursorOutline.classList.add('hovered');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursorOutline.classList.remove('hovered');
+            });
+        });
+    </script>
+</body>
+</html>
